@@ -2,19 +2,19 @@
 FROM node:14.15.4
 
 # Create a directory in the container to store the application
-RUN mkdir app
+RUN mkdir website
 
 # Set the working directory to the app directory
-WORKDIR /app
+WORKDIR /website
 
 # Copy the public directory to the app directory
-COPY public /app/public
+COPY public /website/public
 
 # Copy the src directory to the app directory
-COPY src /app/src
+COPY src /website/src
 
 # Copy the package.json file to the app directory
-COPY package.json /app/package.json
+COPY package.json /website/package.json
 
 # Install the dependencies
 RUN npm install
