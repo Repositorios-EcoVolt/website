@@ -1,0 +1,12 @@
+.container {
+    max-width: 1200px;
+  }
+  
+  img {
+    transition: transform 0.3s ease;
+  }
+  
+  img:hover {
+    transform: scale(1.05);
+  }
+  

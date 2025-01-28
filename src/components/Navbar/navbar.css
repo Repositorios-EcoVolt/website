@@ -1,0 +1,118 @@
+/* Estilos Generales */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Elimina el scroll horizontal */
+}
+
+.navbar {
+  background: #fff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  margin-right: 20px; /* Añade espacio entre el logo y el menú */
+  margin-left: 20px;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+}
+
+/* Menú */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Espaciado horizontal entre los elementos del menú */
+  margin: 0;
+  padding: 0;
+  flex: 1; /* Permite que el menú ocupe el espacio sobrante */
+}
+
+.nav-item {
+  position: relative; /* Necesario para que el dropdown se posicione respecto al nav-item */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease, font-weight 0.3s ease; /* Animación suave */
+}
+
+.nav-link:hover {
+  color: #1a1a5e; /* Azul más oscuro al pasar el cursor */
+  font-weight: 600; /* Grosor ligeramente más alto */
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute; /* El menú se posiciona fuera del flujo del documento */
+  top: 100%; /* Justo debajo del elemento padre */
+  left: 0;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 10;
+  visibility: hidden; /* Oculta inicialmente */
+  opacity: 0; /* Totalmente transparente inicialmente */
+  transform: translateY(-10px); /* Desplazamiento inicial */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Animación suave */
+}
+
+/* Mostrar el Dropdown */
+.nav-item:hover .dropdown {
+  visibility: visible; /* Hace visible el menú */
+  opacity: 1; /* Aumenta la opacidad */
+  transform: translateY(0); /* Regresa a la posición original */
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease, font-weight 0.3s ease; /* Animación suave */
+}
+
+.dropdown a:hover {
+  background: #f5f5f5;
+  color: #1a1a5e; /* Azul más oscuro */
+  font-weight: 600; /* Grosor ligeramente más alto */
+}
+
+/* Botón de Iniciar Sesión */
+.login-button {
+  background: #24248f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+  margin-left: auto; /* Empuja el botón a la derecha */
+  margin-right: 20px;
+}
+
+.login-button:hover {
+  background: #1e1e7a;
+}
